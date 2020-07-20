@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html class="axHtmlBackground" id="html">
+
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <link rel="stylesheet" type="text/css" media="screen" href="./index.css" />
+   <script src=".\index.js" defer></script>
+   </script>
+</head>
+
+<body class="axContainer1" onclick="Process_Clicks(event)">
+
+   <div class="hidden" id="Show_Header_Section">
+      Sandbox - <i> Test website.</i><br>
+   </div>
+
+   <div class="axContainer2 axInline" style="width:auto">
+      Sandbox - <i> Test website.</i><br>
+      <a class="image_HideInfo" id="Hide_Header_Notes">Hide</a>
+      <a class="image_ShowInfo" id="Show_Header_Notes">Show</a>
+         <! *** Menu Notes Column ****************************************** !>
+         <div class="axNotesContainer hidden" id="Header_Notes_Section">
+            The <b><i>MENU</i></b> Section shows the different Sections that exist on the webpage. <br><br>
+            This project demonstrates JavaScript, HTML, CSS, Flex, menu integration and 
+            onclick events. <br><br>
+            <li> 
+               It uses element styles to hide/unhide sections or change their appearance.
+            </li>
+         </div>
+      </div>
+   </div>
+
+   <! *** Header ***************************************** !>
+   <div class="axContainer2 axBlock" id="Header_Section">
+
+      <! *** Top Menu Column 2 ************************ !>
+      <div class="axMenuButton" id="nav_States"    >States</div>
+      <div class="axMenuButton" id="nav_Engines"   >Job Search Engines</div>
+      <div class="axMenuButton" id="nav_Titles"    >Titles</div>
+      <div class="axMenuButton" id="nav_Quotes"    >Quote of the Day</div>
+      <div class="axMenuButton" id="nav_Favorites" >Favorites</div>
+      <div class="axMenuButton" id="nav_Fortune500">Fortune 500</div>
+      <div class="axMenuButton" id="nav_Themes"    >Themes</div>
+      <div class="axMenuButton" id="nav_Resume"    >Resume</div>
+      <div class="axMenuButton" id="nav_All"       >All</div>
+      <div class="axMenuButton" id="nav_None"      >None</div>
+   </div>
+
+   <! *** States Section ********************* !>
+   <div class="axContainer2 Hideable" id="States_Section">
+      <! *** States Heading Column ****************** !>
+      <div class="axContainer3 axInline">
+         <div class="inline" id="Show_States_Notes">
+            <b>States</b> - <i>Select a State for the Next Step.</i><br>
+            <a class="image_ShowInfo" id="Show_States_Notes">Show</a>
+         </div>
+      <div id="Hide_States_Notes">
+         <b>States</b> - <i>Select a State for the Next Step.</i><br>
+         <a class="image_HideInfo" id="Hide_States_Notes">Hide</a>
+
+         <! *** States Notes Column ****************************************** !>
+         <div class="axNotesContainer axInline hidden" id="States_Notes_Section">
+            The <b><i>STATES</i></b> Section shows a list of the 50 States with hyperlink to Wikipedia.com for each State. <br><br>
+            It demonstrates CSS, HTML, Flex containers, flex buttons, dynamic hyperlinks, single-element array, 
+            Array.Mapping, dynamic HTML, innerHTML Replacement and event handling.  <br><br>
+            <li> 
+               It uses element styles to hide/unhide sections or change their appearance.
+            </li>
+         </div>
+      </div>
+      </div class="axContainer3">
+      <div class="axContainer3" id="id_States">(States Placeholder)</div>
+   </div class="axContainer2">
+   
+   <! *** Engines Section ********************* !>
+   <div class="axContainer2 Hideable" id="Engines_Section">
+      <! *** Engines Heading Column ****************** !>
+      <div class="axContainer3 axInline">
+         <div class="inline" id="Show_Engines_Notes">
+            <b>Job Search Engines</b> - <i>Select a Search Engine for the next Step.</i><br>
+            <a class="image_ShowInfo" id="Show_Engines_Notes">Show</a>
+         </div>
+      <div id="Hide_Engines_Notes">
+         <b>Job Search Engines</b> - <i>Select a Search Engine for the next Step.</i><br>
+         <a class="image_HideInfo" id="Hide_Engines_Notes">Hide</a>
+         <! *** Engines Notes Column ****************************************** !>
+         <div class="axNotesContainer axInline hidden" id="Engines_Notes_Section">
+            The <b><i>JOB SEARCH ENGINES</i></b> Section shows a list of several Job Search Engines (websites) 
+            with hyperlinks to their respective search pages.<br><br>
+            It demonstrates CSS, HTML, Flex containers, flex buttons, dynamic hyperlinks, multi-element array, 
+            Array.Mapping, dynamic HTML, innerHTML Replacement and 
+            event handling.<br><br>
+            <li> 
+               It uses element styles to hide/unhide sections or change their appearance.
+            </li>
+         </div>
+      </div>
+      </div class="axContainer3">
+      <div class="axContainer3" id="id_Engines">(Engines Placeholder)</div>
+   </div class="axContainer2">
+
+   <! *** Titles Section ********************* !>
+   <div class="axContainer2 Hideable" id="Titles_Section">
+      <! *** Titles Heading Column ****************** !>
+      <div class="axContainer3 axInline">
+         <div class="inline" id="Show_Titles_Notes">
+            <b>Titles</b> - <i>Choose a Title for next Step.</i><br>
+            <a class="image_ShowInfo" id="Show_Titles_Notes">Show</a>
+         </div>
+      <div id="Hide_Titles_Notes">
+         <b>Titles</b> - <i>Choose a Title for next Step.</i><br>
+         <a class="image_HideInfo" id="Hide_Titles_Notes">Hide</a>
+         <! *** Titles Notes Column ****************************************** !>
+         <div class="axNotesContainer axInline hidden" id="Titles_Notes_Section">
+            The <b><i>TITLES</i></b> Section shows a list of several Job Titles with hyperlink to Wikipedia.com for each one. <br><br>
+            It demonstrates CSS, HTML, Flex containers, flex buttons, dynamic hyperlinks, single-element array, 
+            Array.Mapping, dynamic HTML, innerHTML Replacement and
+            event handling.and using element styles to hide sections (self-hiding Sections).<br><br>
+            <li> 
+               It uses element styles to hide/unhide sections or change their appearance.
+            </li>
+         </div>
+      </div>
+      </div class="axContainer3">
+      <div class="axContainer3" id="id_Titles">(Titles Placeholder)</div>
+   </div class="axContainer2">
+
+   <! *** Quotes Section ********************* !>
+   <div class="axContainer2 Hideable" id="Quotes_Section">
+      <! *** Quotes Heading Column ****************** !>
+      <div class="axContainer3 axBlock">
+         <div class="axContainer3 axBlock">
+            &nbsp;<b>Quote of the Day</b>&nbsp;<A href="https://blog.hubspot.com/sales/famous-movie-quotes" target="_blank">(source)</a><br>
+            <a class="image_ShowInfo" id="Show_Quotes_Notes">Show<br></a>
+            <a class="image_HideInfo" id="Hide_Quotes_Notes">Hide<br></a>
+            <br>
+            <! *** Quotes Notes Column ****************************************** !>
+            <div class="axNotesContainer" id="Quotes_Notes_Section">
+               The <b><i>QUOTE OF THE DAY</i></b> Section shows a forward-only pageable list of Quotations (one at a time). <br><br>
+               It demonstrates CSS, HTML, Flex containers, flex buttons, single-element array, 
+               Array.Mapping, innerHTML Replacement, event handling and using element styles 
+               to change Font Size in an element.<br><br>
+               <li> 
+                  It uses element styles to hide/unhide sections or change their appearance.
+               </li>
+            </div>
+         </div>
+         <div class="axContainer3 axBlock">
+            <button class="axMenuButton" id="Quotes_Next"       >Next       </button>
+            <button class="axMenuButton" id="Quotes_Font_Small" >Font Small </button>
+            <button class="axMenuButton" id="Quotes_Font_Medium">Font Medium</button>
+            <button class="axMenuButton" id="Quotes_Font_Large" >Font Large </button>
+            <div class="axNotesContainer" id="id_Quotes">(Quotes Placeholder)</div>
+         </div>
+
+         </div>
+      </div>
+
+   <! *** Favorites Section ************************************************** !>
+   <div class="axContainer2 Hideable hidden" id="Favorites_Section">
+      <div class="axContainer3">
+
+         Favorites&nbsp;<A href="https://www.someka.net/" target="_blank">(source)</a>
+         <div class="flex_Border box_Favorites">
+            Jump to Page:&nbsp;
+            <div class="flex_Border axInline">
+               <div class="axInline" id="id_F500_Rolodex">(F500 Rolodex Placeholder)</div>
+            </div>
+         </div>
+
+         old code <A href="https://www.someka.net/" target="_blank">(source)</a>
+         <div class="flex_Border box_Favorites">
+            Jump to Page:&nbsp;
+            <div class="flex_Border axInline">
+               <div class="axInline" id="id_FAV_Rolodex">(FAV Rolodex Placeholder)</div>
+            </div>
+         </div>
+
+         <div class="flex_Border box_Favorites">
+            Navigate:&nbsp;
+            <button class="axMenuButton" onclick="FAV.FirstPage()"><< First</button>
+            <button class="axMenuButton" onclick="FAV.PrevPage()">< Prev</button>
+            <button class="axMenuButton" onclick="FAV.NextPage()">Next ></button>
+            <button class="axMenuButton" onclick="FAV.LastPage()">Last >></button>
+         </div>
+
+         <div class="flex_Border box_Favorites">
+            Position:&nbsp;
+            <div class="axInline" id="id_FAV_List_Pages" style="font-size:1.5em">(pages)</div>
+            <div class="axInline" id="id_FAV_List_Items" style="font-size:1.5em">(items)</div>
+         </div>
+
+         <div class="flex_Border box_Favorites">
+            <div id="id_FAV_List">(FAV Placeholder)</div>
+         </div>
+
+      </div class="axContainer3">
+   </div class="axContainer3" id="Favorites_Section">
+
+   <! *** Fortune 500 Section ************************************************** !>
+   <div class="axContainer2 Hideable" id="Fortune500_Section">
+      <div class="axContainer3">
+
+         Fortune 500 <A href="https://www.someka.net/" target="_blank">(source)</a>
+         <div class="flex_Border box_Fortune500">
+            Jump to Page:&nbsp;
+            <div class="flex_Border axInline">
+               <div class="axInline" id="id_F500_Rolodex">(F500 Rolodex Placeholder)</div>
+            </div>
+         </div>
+
+         <div class="flex_Border box_Fortune500">
+            Navigate:&nbsp;
+            <button class="axMenuButton" onclick="F500.FirstPage()"><< First</button>
+            <button class="axMenuButton" onclick="F500.PrevPage()">< Prev</button>
+            <button class="axMenuButton" onclick="F500.NextPage()">Next ></button>
+            <button class="axMenuButton" onclick="F500.LastPage()">Last >></button>
+         </div>
+
+         <div class="flex_Border box_Fortune500">
+            Position:&nbsp;
+            <div class="axInline" id="id_F500_List_Pages" style="font-size:1.5em">(pages)</div>
+            <div class="axInline" id="id_F500_List_Items" style="font-size:1.5em">(items)</div>
+         </div>
+
+         <div class="flex_Border box_Fortune500">
+            <div id="id_F500_List">(Fortune 500 Placeholder)</div>
+         </div>
+
+      </div class="axContainer3">
+   </div class="axContainer3" id="Fortune500_Section">
+
+   <! *** Themes Section ********************* !>
+   <div class="axContainer2 Hideable" id="Themes_Section">
+      <! *** Themes Heading Column ****************** !>
+      <div class="axContainer3 axInline">
+         <div><b>Themes</b> - <i>Click on a color Button to change the color Theme of the website. Click the DEFAULT button to reset the color Theme.</div>
+         <a class="image_ShowInfo" id="Show_Themes_Notes">Show</a>
+         <a class="image_HideInfo" id="Hide_Themes_Notes">Hide</a>
+         <! *** Themes Notes Column ****************************************** !>
+         <div class="axNotesContainer axInline hidden" id="Themes_Notes_Section">
+            </i>The <b><i>THEMES</i></b> Section allows you to change the color Theme
+            (Background Color) of the website. On this website, all "containers" (sections, boxes)
+            are based on the base HTML color. By using transparency, 
+            changing the HTML color will cause all the colors on the website to
+            change to a color-coordinated color Theme. <br><br>
+            It demonstrates CSS, HTML, Flex containers, flex buttons, dynamic hyperlinks, single-element array, 
+            Array.Mapping, dynamic HTML, innerHTML Replacement and event handling.<br><br>
+            <li> It uses element styles to hide/unhide sections or change their appearance.</li>
+            <li> It uses element styles to change the color scheme of the web page by changing the background color of the HTML element.</li>
+         </div>
+      </div class="axContainer3">
+      <div class="axContainer3 display_inline" id="id_Color_Themes">(Themes Color Placeholder)</div>
+      <div class="axContainer3 display_inline" id="id_Image_Themes">(Themes Image Placeholder)</div>
+   </div>
+   
+   <! *** Resume Section ********************* !>
+   <div class="axContainer2 Hideable" id="Resume_Section">
+      <! *** Resume Heading Column ****************** !>
+      <div class="axContainer3 axInline">
+         <div><b>Resume</b> - <i> My current resume as of 07/19/20.</i>
+         </div><br>
+         <a class="image_ShowInfo" id="Show_Resume_Notes">Show</a>
+         <a class="image_HideInfo" id="Hide_Resume_Notes">Hide</a>
+
+      <! *** Resume Notes Column ****************************************** !>
+      <div class="axNotesContainer axInline hidden" id="Resume_Notes_Section">
+         The <b><i>Resume</i></b> Section shows my current Resume (PDF Format).<br><br>
+         <li> It shows the PDF file as a hyperlink (opens in a separate page).</li>
+         <li> It shows the PDF file as an object imbedded directly into the web page (scrolls the text inline).</li>
+      </div>
+
+      </div class="axContainer3">
+      <div class="axContainer3" id="id_Resume">(Resume Placeholder)</div>
+   </div>
+   
+   <! *** Footer ***************************************** !>
+   <div class="axContainer2  axBlock" id="Footer_Section">
+      <! *** Top Menu ************************ !>
+         Sandbox
+         <a class="image_ShowInfo" id="Show_Footer_Notes">Show</a>
+         <a class="image_HideInfo" id="Hide_Footer_Notes">Hide</a>
+         <! *** Footer Notes Column ****************************************** !>
+         <div class="axNotesContainer" id="Footer_Notes_Section">
+            I hope you enjoyed my project in JavaScript, CSS and HTML, highlighting various techniques I have learned.
+         </div class="axContainer3">
+      </div>
+      <! *** Top Menu Column ************************ !>
+      <div class="axContainer2 axBlock id="Footer_Section">
+         <div class="axMenuButton" id="nav_Contact">Contact Us</div>
+         <div class="axMenuButton" id="nav_Privacy">Privacy Statement</div>
+         <div class="axMenuButton" id="nav_Browers">Browser Compatability</div>
+      </div class="axContainer3">
+
+      <! *** Copyright Column ****************************************** !>
+      <div class="axContainer3" id="Titles_Notes_Section">
+         Copyright (c) 2020 by James Coons<br><br>
+         Check out menu system in https://www.accessexplorer.net
+      </div>
+
+</body>
+
+</html>

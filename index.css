@@ -1,0 +1,498 @@
+/* ***************************************************************************************************************
+//define: .visible                         // (global) Class to show an element in HTML
+//define: .hidden                          // (global) Class to hide an element in HTML
+//define: .axInline                        // (global) Class to modify an element's display
+//define: .axBlock                         // (global) Class to modify an element's display
+
+//define: .xaxPageContainer                 // Border around entire page (not used)
+
+//define: .axHeaderFooter                  // Page Header (top) and Footer (bottom)
+
+   // Major Section Border Area
+//define: .axContainer                     // Flex Border for Section Headings, Notes
+//define: .axNotesContainer                     // Area for Notes
+
+//define: .b_SectionBorder                 // Invisible Flex Border around a Section (Red)
+//define: .Ghost_Button                    // Medium Button (Standard)
+//define: .QD_Text                         // Flex Box for Quote of the Day Text Area
+*/
+
+/* *** SHORTCUTS ************************************************************************************************* */
+.visible       {display:block}
+.hidden        {display:none}
+.axInline      {display:inline}
+.axBlock       {display:block}
+
+/* *** GLOBAL DEFAULTS ******************************************************************************************* */
+body { // Purple
+   margin:0px; padding:0px;
+   background-color: Purple; // #0000ff;
+   border:1.0em solid #DCE3E6; margin:5px; padding:5px;             // TEST
+   // border: 0px; margin:0px; padding:0px;
+   // background-image:url("./Images/Blue_Noise.bmp");
+   // box-shadow: 2px 2px 2px rgba(15, 11, 15, 0.856), 2px 2px 2px white inset, -3px -3px 3px rgb(105, 105, 105) inset;
+   transition: 0.5s;
+   }
+
+td, tr {height:50px; padding:1px; border:1px;}
+
+.b_SectionBorder { // Invisible Flex Border around a Section (Red)
+   display:flex; flex-direction:row; flex-wrap:wrap; flex:20%; flex-align-text:left; align-items:stretch;
+   // border:5px solid Red; margin:5px; padding:5px;             // TEST
+   border:0px; margin:4px; padding:2px;             // PROD
+   width:auto; height:auto;
+   }
+
+.flex_Border { // Invisible Flex Border around a Section (Red)
+   display:flex; flex-align-text:left; flex-direction:row; flex-wrap:wrap; flex-flow:column wrap; align-items:stretch; // flex:20%; 
+   align-content: flex-start;
+   border:0px; margin:0px; padding:0px;               // PROD
+   // border:2px solid Red; margin:10px; padding:10px;      // TEST
+   // width:auto; height:auto;
+   }
+
+/* *** GHOST BUTTONS ********************************************************************************************* */
+.Ghost_Button:focus {
+   padding:6px; margin:0px;
+   background-color: #e0e0ff;
+   color:Black; font-weight:bold;
+   border-radius:7px;
+   padding:0.25em 2%;
+   box-shadow: none;
+   // box-shadow: 3px 3px 7px rgba(50, 50, 50, 0.8), 2px 2px 2px white inset, -3px -3px 3px rgb(105, 105, 105) inset;
+   transition: 0.2s;
+   }
+
+/* *** ROLODEX SETTINGS ****************************************************************************************** */
+.F500_Rolodex_Button {
+   padding:0px; margin:0px;
+   height: 2.5em;
+   background-color: #eeeeff;
+   color:Black; font-weight:bold;
+   border-radius:7px;
+   padding:0.25em 2%;
+   box-shadow: none;
+   text-align:center;
+   }
+
+.F500_Rolodex_Button:hover {
+   padding:6px; margin:0px;
+   background-color: #ffffff;
+   color:Black; font-weight:bold;
+   border-radius:7px;
+   padding:0.25em 2%;
+   box-shadow: 3px 3px 7px rgba(50, 50, 50, 0.8), 1px 1px 1px white inset, -1px -1px 1px rgb(105, 105, 105) inset;
+   text-align:center;
+   }
+
+.F500_Rolodex_Button:focus {
+   padding:6px; margin:0px;
+   background-color: #e0e0ff;
+   color:Black; font-weight:bold;
+   border-radius:7px;
+   padding:0.25em 2%;
+   box-shadow: none;
+   // box-shadow: 3px 3px 7px rgba(50, 50, 50, 0.8), 2px 2px 2px white inset, -3px -3px 3px rgb(105, 105, 105) inset;
+   text-align:center;
+   }
+
+/* *************************************************************************************************************** */
+.axListLine { // List-Style Line (White)
+   display:flex; flex-direction:row; flex-wrap:wrap; flex:20%; flex-align-text:left; align-items:stretch; // display:flex inline;
+   // font-size:20px; color: Green;
+   color: Black;
+   // border:1px solid Green; margin:5px; padding:5px;      // TEST
+   // border:10px solid Red; // rgba(0, 0, 0,0.3);                // PROD
+   // margin:5px; padding:15px;
+   // margin:1px;
+   // display:flex inline;
+   // justify-contents:flex-start;
+   // align-items:stretch;
+   //
+   // width:90%;
+   // background-color: #ddddff;
+   // background-image:url("./Images/Blue_Noise.bmp");
+   // border-radius:7px;
+   // box-shadow: 3px 3px 3px rgba(15, 11, 15, 0.7);  // PROD
+   // display: block;
+   margin-left: 5px; margin-bottom: 0px; margin-top:0px
+   padding-left: 20px; padding-top: 5px; padding-bottom: 5px; // padding:2px;  // padding:1.33em 1.5em;
+   // box-shadow: 6px 6px 6px #222;
+   background: #ddddff;
+   }
+
+.QD_Text { // Flex Box for Text Area (Green)
+   display:flex; flex-direction:row; flex-wrap:wrap; flex:20%; flex-align-text:left; align-items:stretch; // display:flex inline;
+   font-size:15px; color: Black;
+   background-color: #ddddff;
+   // border:5px solid Green; margin:5px; padding:5px;
+   border:0px solid Black; margin:3px; padding:7px;
+   width:auto; height:auto;
+   border-radius:7px; box-shadow: 4px 4px 4px rgba(15, 11, 15, 0.7), 0px 0px 4px Black;
+   transition: 0.2s;
+   }
+
+.QD_Text { // Flex Box for Text Area (Green)
+   display:flex; flex-direction:row; flex-wrap:wrap; flex:20%; flex-align-text:left; align-items:stretch; // display:flex inline;
+   font-size:15px; color: Black;
+   // background-color: #ddddff;
+   // border:5px solid Green; margin:5px; padding:5px;
+   border:0px solid Black; margin:3px; padding:7px;
+   width:auto; height:auto;
+   border-radius:7px; box-shadow: 4px 4px 4px rgba(15, 11, 15, 0.7), 0px 0px 4px Black;
+   transition: 0.2s;
+   }
+
+.EndLinks {
+   display:flex; flex-direction:row; flex-wrap:wrap; flex:20%; flex-align-text:left; align-items:stretch;
+   font-size:15px; color: White;
+   font-variant:normal;
+   background-color: transparent;
+   text-align:center;
+   width:auto; height:auto;
+   margin-top:1em;
+   margin-bottom: 0em;
+   transition: 0.2s;
+   }
+
+/* *************************************************************************************************************** */
+.buttonContainer {margin:10px; display:inline-block;}
+
+/* *** AGENCIES ************************************************************************************************** */
+.box_Agencies { // Flex Box for Search List (Green)
+   display:flex; flex-direction:row; flex-wrap:wrap; flex:20%; flex-align-text:left; align-items:stretch; // display:flex inline;
+   font-size:15px; color: Black;
+   background-color: #ddddff;
+   // border:5px solid Green; margin:5px; padding:5px;
+   border:0px solid Black; margin:3px; padding:7px;
+   width:auto; height:auto;
+   border-radius:7px; box-shadow: 4px 4px 4px rgba(15, 11, 15, 0.7), 0px 0px 4px Black;
+   }
+
+/* *** MENU ****************************************************************************************************** */
+.button_Menu {
+   display:flex; flex:1; align-items:left;
+   background: #ddddff; color: Black;
+   margin:1px;
+   margin-top:0px;
+   width:12em;
+   height:2.5em;
+   padding:0.5em;
+   border-radius:7px;
+   box-shadow: 2px 2px 2px rgba(15, 11, 15, 0.7);
+   transition: 0.2s;
+   }
+
+.button_Menu:hover {
+   display:flex; flex:1; align-items:left;
+   background: White; color: Black;
+   margin:1px; // margin-left: 5px; margin-bottom: 0px; margin-top:0px;
+   margin-top:0px;
+   width:12em;
+   padding:0.5em;
+   border-radius:7px;
+   box-shadow: 2px 2px 2px rgba(15, 11, 15, 0.7);
+   transition: 0.2s;
+   }
+
+/* *** Favorites ************************************************************************************************* */
+.box_Favorites { // Flex Box for Favorites List
+   // display:flex; flex-direction:row; flex-wrap:wrap; flex:20%; flex-align-text:left; align-items:stretch; // display:flex inline;
+   font-size:15px; color: Black;
+   background-color: #ddddff;
+   // border:0px solid Black; margin:3px; padding:7px;
+   border-radius:7px; box-shadow: 4px 4px 4px rgba(15, 11, 15, 0.7), 0px 0px 4px Black;
+   transition: 0.2s;
+   }
+
+.list_Favorites { // List-Style Line (White)
+   background: transparent; color: Black;
+   text-decoration: underline;
+   font-size:1em;
+   border:1 px solid Black
+   margin:0px;
+   // width:auto; // 12em;
+   height:auto;
+   padding:0em;
+   }
+
+/* *** Fortune 500 ************************************************************************************************* */
+.box_Fortune500 { // Flex Box for Fortune 500 List
+   // display:flex; flex-direction:row; flex-wrap:wrap; flex:20%; flex-align-text:left; align-items:stretch; // display:flex inline;
+   font-size:15px; color: Black;
+   background-color: #ddddff;
+   // border:0px solid Black; margin:3px; padding:7px;
+   border-radius:7px; box-shadow: 4px 4px 4px rgba(15, 11, 15, 0.7), 0px 0px 4px Black;
+   transition: 0.2s;
+   }
+
+.list_Fortune500 { // List-Style Line (White)
+   background: transparent; color: Black;
+   text-decoration: underline;
+   font-size:1em;
+   border:1 px solid Black
+   margin:0px;
+   // width:auto; // 12em;
+   height:auto;
+   padding:0em;
+   }
+
+/* *** TITLES **************************************************************************************************** */
+.box_Titles { // Flex Box for Title List (Green)
+   display:flex; flex-direction:row; flex-wrap:wrap; flex:20%; flex-align-text:left; align-items:stretch; // display:flex inline;
+   font-size:15px; color: Black;
+   background-color: #ddddff;
+   // border:5px solid Green; margin:5px; padding:5px;
+   border:0px solid Black; margin:3px; padding:7px;
+   width:auto; height:auto;
+   border-radius:7px; box-shadow: 4px 4px 4px rgba(15, 11, 15, 0.7), 0px 0px 4px Black;
+   transition: 0.2s;
+   }
+
+.button_Titles { // List-Style Line (White)
+   display:flex; flex:1; align-items:left;
+   background: #ddddff; color: Black;
+   margin:1px; // margin-left: 5px; margin-bottom: 0px; margin-top:0px;
+   margin-top:0px;
+   width:12em;
+   height:2.5em;
+   padding:0.5em;
+   border-radius:7px;
+   box-shadow: 2px 2px 2px rgba(15, 11, 15, 0.7);
+   transition: 0.2s;
+   }
+
+/* *** Other Standards ******************************************************************************************* */
+.Copyright {
+   // display:flex; flex-direction:row; flex-wrap:wrap; align-items:stretch;
+   font-size:0.5em; color: Black;
+   margin-top:1em; margin-bottom: 1em;
+   padding:0em;
+   font-variant:normal;
+   text-align:center;
+   }
+
+/* *** NAVIGATION MENU ******************************************************************************************* */
+/* Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_mobile_navbar_hor */
+.mobile-container {
+   max-width: 480px;
+   margin:auto;
+   background-color: #555;
+   height: 500px;
+   color: white;
+   border-radius:10px;
+   transition: 0.2s;
+   }
+
+.nav_Menu {
+   font-family: "Calibri";
+   font-size:1em;
+   display: flex wrap;
+   overflow: hidden;
+   background-color: rgba(255,255,255,0.05);
+   border:0.025em solid rgba(255,255,255,0.45);
+   position: relative;
+   width: auto;
+   padding:0.3em;
+   box-shadow: 
+      0em 0em 8px rgba(0,0,0,0.50),
+      -5px -5px 15px rgba(255,255,255,0.25) inset,
+      +5px +5px 15px rgba(255,255,255,0.25) inset,
+      4px 4px 5px rgba(0,0,0,0.85);
+   transition: 0.2s;
+   }
+
+/* Make FG and BG text colors appear like a variation of existing Background by using transparency */
+.nav_Menu a {
+   display: flex wrap; // flex inline;
+   flex-wrap: wrap;
+   align-items: left;
+   color: rgba(0,0,0,0.75);
+   background-color: rgba(255,255,255,0.45);
+   padding-left: 1em; padding-right:0.5em;
+   padding-top: 0.1em; padding-bottom: 0.1em;
+   text-decoration: none;
+   font-size:0.5em;
+   border:0.025em solid rgba(0,0,0,0.55);
+   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+   transition: 0.2s;
+   }
+
+/* Add a semi-transparent color on mouse-over */
+.nav_Menu a:hover {
+   background-color: rgba(255,255,255,0.70);
+   color: rgba(0,0,0,0.85);
+   border:0.025em solid rgba(255,255,255,0.95);
+   text-decoration: underline solid rgba(0,0,0,0.55);
+   transition: 0.2s;
+   }
+
+/* Style the active link (or home/logo) */
+.active {
+   background-color: #4CAF50;
+   color: white;
+   transition: 0.2s;
+   }
+
+/* ****************************************************************************************** */
+.image_HideInfo { // Smaller Image to "Hide Info"
+   width:2.0em; height:1em;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+   color:White;
+   display: inline;
+   border:0.025em solid White;
+   transition: 0.2s;
+   padding-left: 1vw; padding-right:1vw;
+   margin-left: 2vw; margin-right:2vw;
+   color:White;
+   background-color: rgb(192, 32, 32);
+   box-shadow: 2px 2px 4px Black;
+   }
+
+.image_HideInfo:hover {
+   background-color: rgb(255,128,128);
+   box-shadow: 4px 4px 8px Black;
+   }
+
+/* ****************************************************************************************** */
+.image_ShowInfo { // Smaller Image to "Show Info"
+   width:2.0em; height:1em;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+   color:White;
+   display: inline;
+   border:0.025em solid White;
+   transition: 0.2s;
+   padding-left: 1vw; padding-right:1vw;
+   margin-left: 2vw; margin-right:2vw;
+   color:White;
+   background-color: rgb(32,32,192);
+   box-shadow: 2px 2px 4px Black;
+   }
+
+.image_ShowInfo:hover {
+   background-color: rgb(128,128,255);
+   box-shadow: 4px 4px 8px Black;
+   }
+
+/* *** REVAMPING ************************************************************************************************* */
+.Medium_Button { // List-Style Line (White)
+background-color: Green;
+/*
+   display:flex; flex:1; align-items:left;
+   font-family: "Cambri";
+   background-color: rgb(238,234,208);
+   text-align:center;
+   padding:6px; margin:0px;
+   color:Black; font-weight:bold;
+
+   margin:1px; // margin-left: 5px; margin-bottom: 0px; margin-top:0px;
+   margin-top:0px;
+   width:9em;
+   height:2.5em;
+   border-radius:7px;
+   box-shadow: 2px 2px 2px rgba(15, 11, 15, 0.7);
+*/
+   }
+
+.axMenuButton {
+   display:flex; flex:1; align-items:left;
+   background-color: rgba(255,255,255,0.80); 
+   text-align:center;
+   border:2px solid rgba(255,255,255,0.90); 
+   font-family: "Cambri";
+   padding:6px; 
+   margin:0.3vw;
+   color:Black; font-weight:bold;
+   border-radius:0.8vw; 
+   box-shadow: 0px 0px 4px Black;
+   height: auto;
+   width: auto;
+   transition: 0.1s;
+   }
+
+.axMenuButton:hover {
+   background-color: rgba(255,255,255,0.90); 
+   border:2px solid rgba(255,255,255,0.10); 
+   color:Blue; 
+   box-shadow: 0px 0px 8px Black,
+               3px 3px 7px rgba(50, 50, 50, 0.8), 1px 1px 1px white inset, -1px -1px 1px rgb(105, 105, 105) inset;
+   transition: 0.1s;
+   }
+
+.axMenuButton:focus {
+   background-color: #ffffff;
+   box-shadow: none;
+   transition: 0.1s;
+   }
+
+/* Container Definitions */
+.axHtmlBackground {
+   display:flex; flex-direction:row; flex-wrap:wrap; flex:20%; flex-align-text:center; align-items:stretch;
+   background-color: rgb(019,047,096);
+   // background-color: DarkBlue;
+   // background-image:url("./Images/BG_Brown_Lines.bmp");
+   transition: 0.5s;
+   }
+
+.axContainer1 {// Border around all Page contents (Body)
+   display:flex; flex-direction:row; flex-wrap:wrap; flex:20%; flex-align-text:center; align-items:stretch;
+   background-color: rgba(255,255,255,0.25);
+   border:0.4vw solid rgba(255,255,255,0.25);
+   border-radius:1.0vw; 
+   margin:0.5em; 
+   padding:0.6em; 
+   box-shadow: 4px 4px 4px rgba(15, 11, 15, 0.7), 0px 0px 4px Black;
+   transition: 0.2s;
+   }
+
+.axContainer2 {
+   display:flex; flex-direction:row; flex-wrap:wrap; flex:20%; flex-align-text:center; align-items:stretch;
+   background-color: rgba(255,255,255,0.25);
+   border:0.4vw solid rgba(255,255,255,0.25);
+   border-radius:1.0vw; 
+   margin:0.5em; padding:0.5em; 
+   box-shadow: 4px 4px 4px rgba(15, 11, 15, 0.7), 0px 0px 4px Black;
+   transition: 0.2s;
+   }
+
+.axContainer3 {
+   display:flex; flex-direction:row; flex-wrap:wrap; flex:20%; flex-align-text:center; align-items:stretch;
+   background-color: rgba(255,255,255,0.25);
+   border:0.4vw solid rgba(255,255,255,0.25);
+   border-radius:1.0vw; 
+   margin:0.5em; padding:0.5em; 
+   box-shadow: 4px 4px 4px rgba(15, 11, 15, 0.7), 0px 0px 4px Black;
+   transition: 0.2s;
+   }
+
+.axNotesContainer { // Container and Notes Text
+   display:flex; flex-direction:row; flex-wrap:wrap; flex:20%; flex-align-text:center; align-items:stretch;
+   background-color: rgb(245,245,190);
+   border:0.4vw solid rgba(255,255,255,0.25);
+   border-radius:1.0vw; 
+   margin:0.5em; padding:0.5em; 
+   box-shadow: 4px 4px 4px rgba(15, 11, 15, 0.7), 0px 0px 4px Black;
+   transition: 0.2s;
+   }
+
+.xImageStyle {
+   border:Black;
+   /* width:9vw; */
+   /* height:3vw;  */ 
+   width: 30px;
+   background-color:Black;
+   background-image:url("./Images/Blue_Noise.bmp");
+/*
+      xImageItem = 
+         "<button " +
+         "id='idSetThemeColor' " + 
+         "style='width:9vw; height:3vw; " +
+         "background-image:'./Images/BG_Asphalt.bmp'; " +
+         "color:Black" + 
+         "'" + 
+         "><b>(image) " +
+         "</b>" + 
+         "</button>";
+
+*/
+   }
