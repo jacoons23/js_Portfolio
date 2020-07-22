@@ -335,7 +335,7 @@ td, tr {height:50px; padding:1px; border:1px;}
    }
 
 /* ****************************************************************************************** */
-.image_HideInfo { // Smaller Image to "Hide Info"
+.image_HideInfo { // Button to "Hide Info"
    width:2.0em; height:1em;
    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
    color:White;
@@ -355,7 +355,7 @@ td, tr {height:50px; padding:1px; border:1px;}
    }
 
 /* ****************************************************************************************** */
-.image_ShowInfo { // Smaller Image to "Show Info"
+.image_ShowInfo { // Button to "Show Info"
    width:2.0em; height:1em;
    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
    color:White;
@@ -482,17 +482,4 @@ background-color: Green;
    width: 30px;
    background-color:Black;
    background-image:url("./Images/Blue_Noise.bmp");
-/*
-      xImageItem = 
-         "<button " +
-         "id='idSetThemeColor' " + 
-         "style='width:9vw; height:3vw; " +
-         "background-image:'./Images/BG_Asphalt.bmp'; " +
-         "color:Black" + 
-         "'" + 
-         "><b>(image) " +
-         "</b>" + 
-         "</button>";
-
-*/
    }

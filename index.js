@@ -2,7 +2,7 @@
 
 // console.log ("f: INDEX.JS");
 
-g_Default_Tab = "Themes_Section";
+g_Default_Tab = "Quotes_Section";
 
 /*
    InitSystem()                     // All one-time initialization (deferred)
@@ -1430,37 +1430,37 @@ InitSystem();  // Call Initialization Routine /Init/InitSystem
 function InitSystem() { // console.log ("f: InitSystem()"); 
    // Init Sections and Hide/Unhide default sections as desired //Init /defaults
    document.getElementById("Header_Notes_Section").style.display = "none";
-   document.getElementById("Hide_Header_Notes").style.display = "none";
+   /* document.getElementById("Hide_Header_Notes").style.display = "none"; */
    
    document.getElementById("Footer_Notes_Section").style.display = "none";
-   document.getElementById("Hide_Footer_Notes").style.display = "none";
+   /* ument.getElementById("Hide_Footer_Notes").style.display = "none"; */
 
    InitThemes();
       document.getElementById("Themes_Section").style.display = "none";
       document.getElementById("Themes_Notes_Section").style.display = "none";
-      document.getElementById("Hide_Themes_Notes").style.display = "none";
+      /* ument.getElementById("Hide_Themes_Notes").style.display = "none"; */
 
    InitResume(); // InitResume
       document.getElementById("Resume_Section").style.display = "none";
       document.getElementById("Resume_Notes_Section").style.display = "none";
-      document.getElementById("Hide_Resume_Notes").style.display = "none";
+      /* document.getElementById("Hide_Resume_Notes").style.display = "none"; */
    
    STA.Load(); 
       document.getElementById("States_Section").style.display = "none";
       document.getElementById("States_Notes_Section").style.display = "none";
-      document.getElementById("Hide_States_Notes").style.display = "none";
+      /* document.getElementById("Hide_States_Notes").style.display = "none"; */
    TTL.Load(); 
       document.getElementById("Titles_Section").style.display = "none";
       document.getElementById("Titles_Notes_Section").style.display = "none";
-      document.getElementById("Hide_Titles_Notes").style.display = "none";
+      /* document.getElementById("Hide_Titles_Notes").style.display = "none"; */
    AGT.Load(); 
       document.getElementById("Engines_Section").style.display = "none";
       document.getElementById("Engines_Notes_Section").style.display = "none";
-      document.getElementById("Hide_Engines_Notes").style.display = "none";
+      /* document.getElementById("Hide_Engines_Notes").style.display = "none"; */
    QOD.Load(); 
       document.getElementById("Quotes_Section").style.display = "none";
       document.getElementById("Quotes_Notes_Section").style.display = "none";
-      document.getElementById("Hide_Quotes_Notes").style.display = "none";
+      /* document.getElementById("Hide_Quotes_Notes").style.display = "none"; */
       
    FAV.Init(); 
       document.getElementById("Favorites_Section").style.display = "none";
@@ -1473,16 +1473,15 @@ function InitSystem() { // console.log ("f: InitSystem()");
 
 /* *** Init Resume Section ********************************************* */
 function InitResume() { // console.log ("f: InitResume: " /* + InitResume */);
-   // InitResume
+   // InitResume //resumes
    var select = document.getElementById("id_Resume");
       xList = "";
-      xList = xList + "<a id='Resume_PDF_Link' href='./Images/James Coons Resume.pdf' target='_blank'>Download My Resume</a><br>";
-      /* xList = xList + "<a id='Resume_PDF_Link' href='./Images/James Coons Resume.mht' target='_blank'>Download My Resume</a><br>"; */
-      xList = xList + "<br><br>";
+      xList = xList + "<a id='Resume_PDF_Link' href='./Images/James Coons Resume.pdf' target='_blank'> " +
+         "Download  PDF Resume<br>" +
+         "<img src='./Images/resume.bmp' width='150';>" +
+         "</a><br><br>"
       xList = xList + "<object id='Resume_PDF' data='./Images/James Coons Resume.pdf' width=100% height=500em>";
-
    select.innerHTML = xList;
-   // <img src="https://www.Resume101.com/img/flags/svg/${e.toLowerCase}.svg" width=15px;>
    }
    
 /* *** Process Most Menu Clicks, including "Hide Myself" *** */
@@ -1849,4 +1848,37 @@ function InitThemes() { //Init Themes
          }
       document.getElementById("id_Color_Themes").innerHTML = xRgbList + xGrayList; 
       document.getElementById("id_Image_Themes").innerHTML = xImageList
+   }
+
+// Show/Hide Click Functions 
+function Toggle_NotesButton (event) { 
+   /* <div class="image_HideInfo" onclick="Toggle_NotesButton(event)" id="Toggle_Header_Notes">HdSh</div> */
+   var xId     = event.target.id;
+   xCurText    = document.getElementById(xId).innerHTML
+   xCurClass   = document.getElementById(xId).getAttribute("class")
+   // console.log ("f: Toggle_NotesButton, Id=" + xId + ", CurText=" + xCurText);
+   xNotesId = document.getElementById(xId).getAttribute("data-Section-Id")
+      // console.log ("xNotesId=" + xNotesId);
+   
+   if(xCurText == "Hide")
+      {xNewText = "Show";
+       xNewClass = "Image_ShowInfo";
+       xStyle = "width:2.0em; height:1em; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); " + 
+                "color:White; display: inline; border:0.025em solid White; transition: 0.2s; padding-left: 1vw; padding-right:1vw; " + 
+                "margin-left: 2vw; margin-right:2vw; color:White; background-color: rgb(32,32,192); box-shadow: 2px 2px 4px Black;"                
+       xDisplayStyle="none";
+      } 
+   else
+      {xNewText = "Hide";
+       xNewClass = "Image_HideInfo";
+       xStyle = "width:2.0em; height:1em; text-shadow:2px 2px 4px rgba(0, 0, 0, 0.7); " + 
+                "color:White; display:inline; border:0.025em solid White; transition:0.2s; padding-left:1vw; padding-right:1vw; " +
+                "margin-left:2vw; margin-right:2vw; color:White; background-color:rgb(192, 32, 32); box-shadow:2px 2px 4px Black; "
+       xDisplayStyle="block";
+      }
+   /* Change InnerHTML, Style and Display properties according to if status is SHOW or HIDE */
+   console.log ("f: inside Toggle_Header_Notes")
+   document.getElementById(xId).innerHTML = xNewText
+   document.getElementById(xId).style = xStyle
+   document.getElementById(xNotesId).style.display = xDisplayStyle
    }
